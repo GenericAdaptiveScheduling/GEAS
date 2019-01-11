@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<contexts>
+    <context name="All_Range">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>	
+	
+	<context name="All">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>	
+	
+	<context name="All'">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="A">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="B">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="C">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="D">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="E">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="F">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="G">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="H">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="0">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="0'">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="1">
+		<field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="1'">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="2">
+		<field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="2'">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+
+	<context name="3">
+		<field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="3'">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="4">
+		<field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="4'">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="5">
+		<field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->	
+	</context>
+	
+	<context name="5'">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="6">
+		<field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="6'">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="7">
+		<field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="7'">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="8">
+		<field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="8'">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="9">
+		<field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+	
+	<context name="9'">
+        <field name="id" type="basic-integer" />
+		<field name="time" type="string" />
+		<field name="subject" type="string" />
+		<field name="object" type="string" /><!--longitude_latitude_speed(经度_纬度_速度)-->
+	</context>
+
+</contexts>
