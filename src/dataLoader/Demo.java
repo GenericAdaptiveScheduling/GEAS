@@ -21,8 +21,8 @@ import context.Element;
 
 /**
  *
- * @author why
- * obtain context changes
+ * @author bingying
+ * 获取单条contextchange
  */
 public class Demo extends Changes{
     private int pointer;
@@ -31,7 +31,7 @@ public class Demo extends Changes{
      
     public Demo(String filename) {
     	ArrayList<Context> content = new ArrayList<Context>
-        (ContextLoader.parserXml("src/config/context_3.xml"));
+        (ContextLoader.parserXml(Configuration.contextString));
         
         int num = content.size();
     	for(int k = 0;k < num;k++) {

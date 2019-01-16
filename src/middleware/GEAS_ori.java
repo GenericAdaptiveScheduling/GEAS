@@ -18,18 +18,7 @@ public class GEAS_ori extends Checker {
 
 	public static int checktime = 0;
 	
-	public void setOut() throws IOException {
-    	outFile = id + "_" + technique + "_" + strategy;
-    	File file = new File("data/out/" + outFile + ".txt");
-        // if file doesnt exists, then create it
-        if(!file.getParentFile().exists()) {
-        	file.getParentFile().mkdirs();
-        }
-    	if (!file.exists()) {
-        	file.createNewFile();
-        }
-		out = new FileOutputStream(file);
-	}
+	
 	
 	public void doCheck() throws Exception {
         ContextChange change = new ContextChange();
@@ -42,14 +31,17 @@ public class GEAS_ori extends Checker {
 
             for(int i = 0;i < rules.size();i++) {//循环检测所有的约束
             	Rule rule = rules.get(i);
-            	//if(!rule.getId().startsWith("cst_loc_"))
-            	//	continue;
-            	if(!(rule.getId().equalsIgnoreCase("rule_01")))
-            		continue;         	
+            	//if(!(rule.getId().equalsIgnoreCase("rule_in_DF")))
+            	//	continue;  
+            	//if(!(rule.getId().equalsIgnoreCase("rule_in_AC")))
+            	//	continue;         	
+            	       	
             	
             	LinkedList<ContextChange> listBuffer = rule.getBuffer();
                 if(rule.affect(change)) {
-                	//out.write(("ruleID:"+rule.getId()+"\n"+"Buffer:"+listBuffer.toString()+"\n").getBytes());
+                	//System.out.println("Context:"+change.toString());
+                	//out.write(("Context:"+change.toString()+"\n").getBytes());
+                	//out.write(("\n"+"Before Buffer:"+rule.getBuffer().toString()+"\n").getBytes());
                 	//System.out.println("Rule:"+rule.getId()+" Context:"+change.toString());
                 	//System.out.println("Buffer:"+listBuffer.toString());
                 	//out.write(("Rule:"+rule.getId()+" Context:"+change.toString()+"\n").getBytes());
@@ -58,9 +50,13 @@ public class GEAS_ori extends Checker {
     	    			checkNum++;
         	    		rule.record(rule.getBuffer().size());
     	    			long bs = Calendar.getInstance().getTimeInMillis();
+    	    			rule.setBuffer_(BatchChecker.filter(rule.getBuffer()));
     	    			int linkbefore = nLinks;
     	    			if(technique.matches("ECC")) {
     	    				nLinks += rule.Ecc(out);
+    	    			}
+    	    			if(technique.matches("ECCNew")) {
+    	    				nLinks += rule.EccNew(out);
     	    			}
     	    			if(technique.matches("PCC")) {
     	    				nLinks += rule.Pcc(out);
@@ -69,12 +65,16 @@ public class GEAS_ori extends Checker {
     	    			rule.addTime(sTime);
     	    			pTime += sTime;
     	    			rule.clearBuffer();
-    	    			//System.out.println("Check, checked incs: "+(nLinks) +" - " +(linkbefore) + " = "+ (nLinks-linkbefore));
-    	    			//System.out.println("Line: "+line);
-    	    			
+    	    			//out.write(("Checking: [Rule]="+rule.getId()+" [ChangeNumber]="+line+"\n").getBytes());
+    	    		
+	    	    		//out.write(("Check, checked incs: "+ (nLinks) +" - " +(linkbefore) + " = "+ (nLinks-linkbefore)+"\n").getBytes());
+	    	    		//out.write(("Batch until: "+line+"\n").getBytes());
+	    	    		//if(nLinks>linkbefore)
+	    	    		//	out.write(("line:"+line+"-"+change.toString()).getBytes());
     	    		}
     	    		rule.handleSelf(change);
     	    		rule.setBuffer(change);
+                	//out.write(("\n"+"After Buffer:"+rule.getBuffer().toString()+"\n").getBytes());
     	    		long end = Calendar.getInstance().getTimeInMillis();
     	            allTime += end - start;
                 }

@@ -93,7 +93,7 @@ public class ConstrainLoader {
             }
             rule.setPatterns(patterns);
             
-            Node goals = children.item(7);
+            /*Node goals = children.item(7);
             HashMap<String,String> goalMap = new HashMap<String,String>();
             NodeList goalList = goals.getChildNodes();
             Node first = goalList.item(1);
@@ -133,7 +133,7 @@ public class ConstrainLoader {
 	                }
 	                goalMap.put(nameString, goalString);
 	            }
-	            rule.setGoals(goalMap);
+	            rule.setGoals(goalMap);*/
             
             return rule;
         }

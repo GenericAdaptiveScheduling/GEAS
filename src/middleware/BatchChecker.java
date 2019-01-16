@@ -22,18 +22,7 @@ public class BatchChecker extends Checker {
 		N = n;
 	}
 	
-	public void setOut() throws IOException {
-    	outFile = id + "_" + technique + "_" + strategy + "_" + N;
-    	File file = new File("data/out/" + outFile + ".txt");
-        // if file doesnt exists, then create it
-        if(!file.getParentFile().exists()) {
-        	file.getParentFile().mkdirs();
-        }
-    	if (!file.exists()) {
-        	file.createNewFile();
-        }
-		out = new FileOutputStream(file);
-	}
+
     
 	public static LinkedList<ContextChange> filter(LinkedList<ContextChange> changes) {
 		LinkedList<ContextChange> result = new LinkedList<ContextChange>(changes);

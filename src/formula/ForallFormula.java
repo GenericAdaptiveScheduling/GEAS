@@ -93,11 +93,11 @@ public class ForallFormula extends Formula {
 
     @Override
     public ArrayList<Link> linkGenerationEcc(HashMap<String,Context> contexts,RuntimeNode node) {
-        if(Configuration.getConfigStr("optimizingStrategy").matches("ON")) {
+        /*if(Configuration.getConfigStr("optimizingStrategy").matches("ON")) {
             if(!goalLink.matches("false")) {
                 return new ArrayList<Link>();
             }
-        }
+        }*/
         
         ArrayList<Link> result = new ArrayList<Link>();
         Context ct = contexts.get(this.context);
@@ -187,11 +187,11 @@ public class ForallFormula extends Formula {
 
 	@Override
     public ArrayList<Link> linkGenerationPcc(HashMap<String,Context> contexts,RuntimeNode node,ContextChange change) {
-        if(Configuration.getConfigStr("optimizingStrategy").matches("ON")) {
+		/*if(Configuration.getConfigStr("optimizingStrategy").matches("ON")) {
             if(!goalLink.matches("false")) {
                 return new ArrayList<Link>();
             }
-        }
+        }*/
         if(!affect(change)) {}
         else if(subFormula.affect(change)) {
             ArrayList<Link> result = new ArrayList<Link>();
@@ -335,11 +335,11 @@ public class ForallFormula extends Formula {
 		ArrayList<ContextChange> deleteChanges = group.getDeleteChanges();
 		int add = addChanges.size();
 		int delete = deleteChanges.size();
-		if(Configuration.getConfigStr("optimizingStrategy").matches("ON")) {
+		/*if(Configuration.getConfigStr("optimizingStrategy").matches("ON")) {
             if(!goalLink.matches("false")) {
                 return new ArrayList<Link>();
             }
-        }
+        }*/
         if(!affect(context)) {}
 		else if(this.context.matches(context)) {
 			ArrayList<Link> result = new ArrayList<Link>();

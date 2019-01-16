@@ -34,7 +34,7 @@ import formula.UnaryFormula;
 /**
 *
 * @author why
-* implementation of GEAS-opt scheduling strategy
+* implementation of the GEAS-opt scheduling strategy
 */
 public class GEAS_opt  extends Checker{
 	
@@ -44,18 +44,7 @@ public class GEAS_opt  extends Checker{
 		public ArrayList<Boolean> bfuncValueList2 = new ArrayList<Boolean>();
 		public boolean flag = false;
 		
-		public void setOut() throws IOException {
-	    	outFile = id + "_" + technique + "_" + strategy;
-	    	File file = new File("data/out/" + outFile + ".txt");
-	        // if file doesnt exists, then create it
-	        if(!file.getParentFile().exists()) {
-	        	file.getParentFile().mkdirs();
-	        }
-	    	if (!file.exists()) {
-	        	file.createNewFile();
-	        }
-			out = new FileOutputStream(file);
-		}
+		
 		
 		public void doCheck() throws Exception {
 	        ContextChange change = new ContextChange();

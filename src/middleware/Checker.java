@@ -6,6 +6,7 @@
 
 package middleware;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.LinkedList;
 
+import dataLoader.Configuration;
 import rule.Rule;
 
 /**
@@ -49,13 +51,24 @@ public abstract class Checker {
     	pTime = 0;
         checkNum = 0;
         nLinks = 0;
-        in = "data/changes/" + id + ".txt";
+        in = Configuration.dataRoot + id + ".txt";
     	
     }
     
     protected abstract void doCheck() throws Exception;
     
-    protected abstract void setOut() throws Exception;
+	public void setOut() throws IOException {
+    	outFile = id + "_" + technique + "_" + strategy;
+    	File file = new File(Configuration.outRoot + outFile + ".txt");
+        // if file doesnt exists, then create it
+        if(!file.getParentFile().exists()) {
+        	file.getParentFile().mkdirs();
+        }
+    	if (!file.exists()) {
+        	file.createNewFile();
+        }
+		out = new FileOutputStream(file);
+	}
     
     public FileOutputStream getOut() {
     	return out;

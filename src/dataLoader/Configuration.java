@@ -19,20 +19,26 @@ import org.apache.commons.logging.LogFactory;
  * 
  */
 public class Configuration {
-    private static Log logger;
-    private static final Properties systemProperties;
-
+//    private static Log logger;
+//    private static final Properties systemProperties;
+//    public final static String systemProString = "/config/System.properties";
+    public final static String constraintRuleString = "../GEAS/config/constraint/consistency_rules.xml";
+    public final static String contextString = "../GEAS/config/constraint/context.xml";
+    public final static String dataRoot = "../GEAS/config/data/changes/";
+    public final static String outRoot = "../GEAS/config/data/out/";
+/*    
     static {
         logger = LogFactory.getLog(Configuration.class.getName());     
         systemProperties = new Properties();
     }
     public void init(String filename) {
-        InputStream propertyInputStream = Configuration.class.getResourceAsStream("/config/System.properties");
+        InputStream propertyInputStream = Configuration.class.getResourceAsStream(systemProString);
         if (propertyInputStream == null) {
             logger.error("System.property inputstream is null");
         }    
         
         try {
+        	System.out.println(systemProString);
             systemProperties.load(propertyInputStream);
         } catch (IOException ex) {
             logger.error(ex);
@@ -58,5 +64,5 @@ public class Configuration {
     public static boolean getConfigBool(String key) {
         boolean d = Boolean.parseBoolean(systemProperties.getProperty(key).trim());
         return d;
-    }
+    }*/
 }

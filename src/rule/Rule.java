@@ -15,7 +15,7 @@ import java.util.LinkedList;
 import java.util.Map;
 
 import middleware.Detection;
-import middleware.NewBatch;
+import middleware.GEAS_ori;
 import middleware.SameContextChange;
 
 import org.apache.commons.logging.Log;
@@ -369,7 +369,7 @@ public class Rule {
   	  		}
 
   			setFormula(createTree(getFormula()));
-  			NewBatch.checktime++;
+  			GEAS_ori.checktime++;
   			ArrayList<Link> link = Detection.detectEcc(this);//constraint checking
   			setTempLink(link);
   		}
@@ -396,7 +396,7 @@ public class Rule {
   	  		}
   			
   			setFormula(formula.createTreeNew(contexts));
-  			NewBatch.checktime++;
+  			GEAS_ori.checktime++;
   			ArrayList<Link> link = Detection.detectEcc(this);//constraint checking
   			setTempLink(link);
   		}
@@ -443,7 +443,7 @@ public class Rule {
 	  			return 0;
 	  		setFormula(createTreePcc(getFormula(),new SameContextChange(change)));
 
-			NewBatch.checktime++;
+	  		GEAS_ori.checktime++;
 	  		ArrayList<Link> link = Detection.detectPccM(this,new SameContextChange(change));//constraint checking
 	  		setTempLink(link);
   		}
@@ -459,7 +459,7 @@ public class Rule {
 	  			}
 	  			ArrayList<Link> link = new ArrayList<Link>();
 	  			setFormula(createTreePcc(getFormula(),temp));
-				NewBatch.checktime++;
+	  			GEAS_ori.checktime++;
 				//out.write(("Same change group: "+ temp.toString()+'\n').getBytes());
 	  			link = Detection.detectPccM(this,temp);
 	  			//out.write(("End group: "+ temp.toString()+'\n').getBytes());
