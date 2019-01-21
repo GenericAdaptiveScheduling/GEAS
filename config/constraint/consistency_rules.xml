@@ -1,0 +1,774 @@
+<?xml version="1.0"?>
+
+<rules>
+
+	<rule>
+		<id>rule_00</id>
+		<formula>
+			<forall var = "v1" in = "pat_000">
+				<bfunc name = "sz_loc_range">
+					<param pos = "1" var = "v1" field = "object" />
+				</bfunc>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_000" />
+				<second type = "del" name = "pat_000" />
+			</pattern>
+		</patterns>
+	</rule>
+
+	<rule>
+		<id>rule_01</id>
+		<formula>
+			<forall var = "v1" in = "pat_001">
+				<forall var = "v2" in = "pat_002">
+					<implies>
+						<and>
+							<not>
+								<bfunc name = "same">
+									<param pos = "1" var = "v1" field = "subject" />
+									<param pos = "2" var = "v2" field = "subject" />
+								</bfunc>
+							</not>
+							<bfunc name = "sz_loc_close">
+								<param pos = "1" var = "v1" field = "object" />
+								<param pos = "2" var = "v2" field = "object" />
+							</bfunc>
+						</and>
+						<bfunc name = "sz_spd_close">
+								<param pos = "1" var = "v1" field = "object" />
+								<param pos = "2" var = "v2" field = "object" />
+						</bfunc>
+					</implies>
+				</forall>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_001" />
+				<second type = "del" name = "pat_001" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_001" />
+				<second type = "del" name = "pat_002" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_002" />
+				<second type = "del" name = "pat_001" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_002" />
+				<second type = "del" name = "pat_001'" />
+			</pattern>
+		</patterns>
+	</rule>
+
+	<rule>
+		<id>rule_10</id>
+		<formula>
+			<forall var = "v1" in = "pat_100">
+				<forall var = "v2" in = "pat_101">
+					<implies>
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+						<bfunc name = "sz_loc_dist">
+							<param pos = "1" var = "v1" field = "object" />
+							<param pos = "2" var = "v2" field = "object" />
+						</bfunc>
+					</implies>
+				</forall>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_100" />
+				<second type = "del" name = "pat_100" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_100" />
+				<second type = "del" name = "pat_101" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_101" />
+				<second type = "del" name = "pat_100" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_101" />
+				<second type = "del" name = "pat_101" />
+			</pattern>
+		</patterns>
+	</rule>
+
+	<rule>
+		<id>rule_11</id>
+		<formula>
+			<forall var = "v1" in = "pat_102">
+				<forall var = "v2" in = "pat_103">
+					<implies>
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+						<bfunc name = "sz_loc_dist">
+							<param pos = "1" var = "v1" field = "object" />
+							<param pos = "2" var = "v2" field = "object" />
+						</bfunc>
+					</implies>
+				</forall>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_102" />
+				<second type = "del" name = "pat_102" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_102" />
+				<second type = "del" name = "pat_103" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_103" />
+				<second type = "del" name = "pat_102" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_103" />
+				<second type = "del" name = "pat_103" />
+			</pattern>
+		</patterns>
+	</rule>
+
+	<rule>
+		<id>rule_12</id>
+		<formula>
+			<forall var = "v1" in = "pat_104">
+				<forall var = "v2" in = "pat_105">
+					<implies>
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+						<bfunc name = "sz_loc_dist">
+							<param pos = "1" var = "v1" field = "object" />
+							<param pos = "2" var = "v2" field = "object" />
+						</bfunc>
+					</implies>
+				</forall>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_104" />
+				<second type = "del" name = "pat_104" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_104" />
+				<second type = "del" name = "pat_105" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_105" />
+				<second type = "del" name = "pat_104" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_105" />
+				<second type = "del" name = "pat_105" />
+			</pattern>
+		</patterns>
+	</rule>
+
+	<rule>
+		<id>rule_13</id>
+		<formula>
+			<forall var = "v1" in = "pat_106">
+				<forall var = "v2" in = "pat_107">
+					<implies>
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+						<bfunc name = "sz_loc_dist">
+							<param pos = "1" var = "v1" field = "object" />
+							<param pos = "2" var = "v2" field = "object" />
+						</bfunc>
+					</implies>
+				</forall>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_106" />
+				<second type = "del" name = "pat_106" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_106" />
+				<second type = "del" name = "pat_107" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_107" />
+				<second type = "del" name = "pat_106" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_107" />
+				<second type = "del" name = "pat_107" />
+			</pattern>
+		</patterns>
+	</rule>
+
+	<rule>
+		<id>rule_14</id>
+		<formula>
+			<forall var = "v1" in = "pat_108">
+				<forall var = "v2" in = "pat_109">
+					<implies>
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+						<bfunc name = "sz_loc_dist">
+							<param pos = "1" var = "v1" field = "object" />
+							<param pos = "2" var = "v2" field = "object" />
+						</bfunc>
+					</implies>
+				</forall>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_108" />
+				<second type = "del" name = "pat_108" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_108" />
+				<second type = "del" name = "pat_109" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_109" />
+				<second type = "del" name = "pat_108" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_109" />
+				<second type = "del" name = "pat_109" />
+			</pattern>
+		</patterns>
+	</rule>
+
+	<rule>
+		<id>rule_15</id>
+		<formula>
+			<forall var = "v1" in = "pat_110">
+				<forall var = "v2" in = "pat_111">
+					<implies>
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+						<bfunc name = "sz_loc_dist">
+							<param pos = "1" var = "v1" field = "object" />
+							<param pos = "2" var = "v2" field = "object" />
+						</bfunc>
+					</implies>
+				</forall>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_110" />
+				<second type = "del" name = "pat_110" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_110" />
+				<second type = "del" name = "pat_111" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_111" />
+				<second type = "del" name = "pat_110" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_111" />
+				<second type = "del" name = "pat_111" />
+			</pattern>
+		</patterns>
+	</rule>
+
+	<rule>
+		<id>rule_16</id>
+		<formula>
+			<forall var = "v1" in = "pat_112">
+				<forall var = "v2" in = "pat_113">
+					<implies>
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+						<bfunc name = "sz_loc_dist">
+							<param pos = "1" var = "v1" field = "object" />
+							<param pos = "2" var = "v2" field = "object" />
+						</bfunc>
+					</implies>
+				</forall>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_112" />
+				<second type = "del" name = "pat_112" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_112" />
+				<second type = "del" name = "pat_113" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_113" />
+				<second type = "del" name = "pat_112" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_113" />
+				<second type = "del" name = "pat_113" />
+			</pattern>
+		</patterns>
+	</rule>
+
+	<rule>
+		<id>rule_17</id>
+		<formula>
+			<forall var = "v1" in = "pat_114">
+				<forall var = "v2" in = "pat_115">
+					<implies>
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+						<bfunc name = "sz_loc_dist">
+							<param pos = "1" var = "v1" field = "object" />
+							<param pos = "2" var = "v2" field = "object" />
+						</bfunc>
+					</implies>
+				</forall>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_114" />
+				<second type = "del" name = "pat_114" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_114" />
+				<second type = "del" name = "pat_115" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_115" />
+				<second type = "del" name = "pat_114" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_115" />
+				<second type = "del" name = "pat_115" />
+			</pattern>
+		</patterns>
+	</rule>
+
+	<rule>
+		<id>rule_18</id>
+		<formula>
+			<forall var = "v1" in = "pat_116">
+				<forall var = "v2" in = "pat_117">
+					<implies>
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+						<bfunc name = "sz_loc_dist">
+							<param pos = "1" var = "v1" field = "object" />
+							<param pos = "2" var = "v2" field = "object" />
+						</bfunc>
+					</implies>
+				</forall>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_116" />
+				<second type = "del" name = "pat_116" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_116" />
+				<second type = "del" name = "pat_117" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_117" />
+				<second type = "del" name = "pat_116" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_117" />
+				<second type = "del" name = "pat_117" />
+			</pattern>
+		</patterns>
+	</rule>
+
+	<rule>
+		<id>rule_19</id>
+		<formula>
+			<forall var = "v1" in = "pat_118">
+				<forall var = "v2" in = "pat_119">
+					<implies>
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+						<bfunc name = "sz_loc_dist">
+							<param pos = "1" var = "v1" field = "object" />
+							<param pos = "2" var = "v2" field = "object" />
+						</bfunc>
+					</implies>
+				</forall>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_118" />
+				<second type = "del" name = "pat_118" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_118" />
+				<second type = "del" name = "pat_119" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_119" />
+				<second type = "del" name = "pat_118" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_119" />
+				<second type = "del" name = "pat_119" />
+			</pattern>
+		</patterns>
+	</rule>
+	
+	<rule>
+		<id>rule_in_AC</id>
+		<formula>
+			<forall var = "v1" in = "pat_A">
+				<exists var = "v2" in = "pat_C">
+					<bfunc name = "same">
+						<param pos = "1" var = "v1" field = "subject" />
+						<param pos = "2" var = "v2" field = "subject" />
+					</bfunc>
+				</exists>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_A" />
+				<second type = "del" name = "pat_A" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_A" />
+				<second type = "add" name = "pat_C" />
+			</pattern>
+			<pattern>
+				<first type = "del" name = "pat_C" />
+				<second type = "del" name = "pat_A" />
+			</pattern>
+			<pattern>
+				<first type = "del" name = "pat_C" />
+				<second type = "add" name = "pat_C" />
+			</pattern>
+		</patterns>
+	</rule>
+	
+	<rule>
+		<id>rule_in_BC</id>
+		<formula>
+			<forall var = "v1" in = "pat_B">
+				<exists var = "v2" in = "pat_C">
+					<bfunc name = "same">
+						<param pos = "1" var = "v1" field = "subject" />
+						<param pos = "2" var = "v2" field = "subject" />
+					</bfunc>
+				</exists>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_B" />
+				<second type = "del" name = "pat_B" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_B" />
+				<second type = "add" name = "pat_C" />
+			</pattern>
+			<pattern>
+				<first type = "del" name = "pat_C" />
+				<second type = "del" name = "pat_B" />
+			</pattern>
+			<pattern>
+				<first type = "del" name = "pat_C" />
+				<second type = "add" name = "pat_C" />
+			</pattern>
+		</patterns>
+	</rule>
+	
+	<rule>
+		<id>rule_in_DF</id>
+		<formula>
+			<forall var = "v1" in = "pat_D">
+				<exists var = "v2" in = "pat_F">
+					<bfunc name = "same">
+						<param pos = "1" var = "v1" field = "subject" />
+						<param pos = "2" var = "v2" field = "subject" />
+					</bfunc>
+				</exists>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_D" />
+				<second type = "del" name = "pat_D" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_D" />
+				<second type = "add" name = "pat_F" />
+			</pattern>
+			<pattern>
+				<first type = "del" name = "pat_F" />
+				<second type = "del" name = "pat_D" />
+			</pattern>
+			<pattern>
+				<first type = "del" name = "pat_F" />
+				<second type = "add" name = "pat_F" />
+			</pattern>
+		</patterns>
+	</rule>
+	
+	<rule>
+		<id>rule_in_EF</id>
+		<formula>
+			<forall var = "v1" in = "pat_E">
+				<exists var = "v2" in = "pat_F">
+					<bfunc name = "same">
+						<param pos = "1" var = "v1" field = "subject" />
+						<param pos = "2" var = "v2" field = "subject" />
+					</bfunc>
+				</exists>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_E" />
+				<second type = "del" name = "pat_E" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_E" />
+				<second type = "add" name = "pat_F" />
+			</pattern>
+			<pattern>
+				<first type = "del" name = "pat_F" />
+				<second type = "del" name = "pat_E" />
+			</pattern>
+			<pattern>
+				<first type = "del" name = "pat_F" />
+				<second type = "add" name = "pat_F" />
+			</pattern>
+		</patterns>
+	</rule>
+	
+	<rule>
+		<id>rule_dis_FC</id>
+		<formula>
+			<forall var = "v1" in = "pat_F">
+				<not>
+					<exists var = "v2" in = "pat_C">
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+					</exists>
+				</not>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_C" />
+				<second type = "del" name = "pat_C" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_C" />
+				<second type = "del" name = "pat_F" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_F" />
+				<second type = "del" name = "pat_C" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_F" />
+				<second type = "del" name = "pat_F" />
+			</pattern>
+		</patterns>
+	</rule>
+	
+	<rule>
+		<id>rule_dis_GE</id>
+		<formula>
+			<forall var = "v1" in = "pat_G">
+				<not>
+					<exists var = "v2" in = "pat_E">
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+					</exists>
+				</not>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_E" />
+				<second type = "del" name = "pat_E" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_E" />
+				<second type = "del" name = "pat_G" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_G" />
+				<second type = "del" name = "pat_E" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_G" />
+				<second type = "del" name = "pat_G" />
+			</pattern>
+		</patterns>
+	</rule>
+	
+	<rule>
+		<id>rule_dis_AG</id>
+		<formula>
+			<forall var = "v1" in = "pat_A">
+				<not>
+					<exists var = "v2" in = "pat_G">
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+					</exists>
+				</not>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_G" />
+				<second type = "del" name = "pat_G" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_G" />
+				<second type = "del" name = "pat_A" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_A" />
+				<second type = "del" name = "pat_G" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_A" />
+				<second type = "del" name = "pat_A" />
+			</pattern>
+		</patterns>
+	</rule>
+	
+	<rule>
+		<id>rule_dis_BH</id>
+		<formula>
+			<forall var = "v1" in = "pat_B">
+				<not>
+					<exists var = "v2" in = "pat_H">
+						<bfunc name = "same">
+							<param pos = "1" var = "v1" field = "subject" />
+							<param pos = "2" var = "v2" field = "subject" />
+						</bfunc>
+					</exists>
+				</not>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_H" />
+				<second type = "del" name = "pat_H" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_H" />
+				<second type = "del" name = "pat_B" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_B" />
+				<second type = "del" name = "pat_H" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_B" />
+				<second type = "del" name = "pat_B" />
+			</pattern>
+		</patterns>
+	</rule>
+	
+	<rule>
+		<id>rule_equal_GI1</id>
+		<formula>
+			<forall var = "v1" in = "pat_G">
+				<exists var = "v2" in = "pat_I">
+					<bfunc name = "same">
+						<param pos = "1" var = "v1" field = "subject" />
+						<param pos = "2" var = "v2" field = "subject" />
+					</bfunc>
+				</exists>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_G" />
+				<second type = "del" name = "pat_G" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_G" />
+				<second type = "add" name = "pat_I" />
+			</pattern>
+			<pattern>
+				<first type = "del" name = "pat_I" />
+				<second type = "del" name = "pat_G" />
+			</pattern>
+			<pattern>
+				<first type = "del" name = "pat_I" />
+				<second type = "add" name = "pat_I" />
+			</pattern>
+		</patterns>
+	</rule>
+	<rule>
+		<id>rule_equal_GI2</id>
+		<formula>
+			<forall var = "v1" in = "pat_I">
+				<exists var = "v2" in = "pat_G">
+					<bfunc name = "same">
+						<param pos = "1" var = "v1" field = "subject" />
+						<param pos = "2" var = "v2" field = "subject" />
+					</bfunc>
+				</exists>
+			</forall>
+		</formula>
+		<patterns>
+			<pattern>
+				<first type = "add" name = "pat_I" />
+				<second type = "del" name = "pat_I" />
+			</pattern>
+			<pattern>
+				<first type = "add" name = "pat_I" />
+				<second type = "add" name = "pat_G" />
+			</pattern>
+			<pattern>
+				<first type = "del" name = "pat_G" />
+				<second type = "del" name = "pat_I" />
+			</pattern>
+			<pattern>
+				<first type = "del" name = "pat_G" />
+				<second type = "add" name = "pat_G" />
+			</pattern>
+		</patterns>
+	</rule>
+</rules>
