@@ -1,6 +1,8 @@
 # Overview
 
-This is GEAS implementation (including GEAS-ori and GEAS-opt). In order to make it ease for users, we applied GEAS to two typical constraint checking techniques ECC and PCC, and gave a runable example (including necessary context changes and consistency constraints).
+This is GEAS implementation (including GEAS-ori and GEAS-opt). In order to make it ease for users, we applied GEAS to two typical constraint checking techniques ECC and PCC, and gave a runable example (i.e., a partial replication package including one hour of taxi data in the form of context changes and 22 consistency constraints annotated with s-conditions). 
+
+Note that the consistency constraints are already annotated with s-conditions (statically analyzed according to certain deduction rules in advance) for ease of GEAS's usage. If anyone is interested, he/she can reach to Project S-conditionGenTool under the same GitHub page to know how s-conditions are generated and annotated for a raw consistency constraint file.
 
 If there is any question, feel free to contact us (cocowhy1013@gmail.com).
 
