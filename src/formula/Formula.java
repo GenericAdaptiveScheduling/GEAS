@@ -7,7 +7,7 @@
 package formula;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.HashMap; 
 
 import middleware.SameContextChange;
 

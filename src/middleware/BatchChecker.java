@@ -12,7 +12,7 @@ import dataLoader.Demo;
 /**
 *
 * @author why
-* implementation of BAT scheduling strategy
+* implementation of the BAT scheduling strategy
 */
 public class BatchChecker extends Checker {
 

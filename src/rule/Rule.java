@@ -813,10 +813,9 @@ public class Rule {
     }
   //  HashMap<String,Context> getContexts()
   	public HashMap<String,Context> changeContext(String contextName, Element aElement, Element bElement){
-  		//System.out.println(contexts.get(contextName).getElements().toString()+"="+aElement.getKey()+"--"+bElement.getKey());
+
   		contexts.get(contextName).deleteElement(aElement.getKey());
   		contexts.get(contextName).addElement(bElement.getKey(), bElement);
-  		//System.out.println(contexts.get(contextName).getElements().toString());
   		return contexts;
   	}
 }

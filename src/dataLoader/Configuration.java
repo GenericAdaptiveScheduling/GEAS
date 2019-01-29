@@ -26,43 +26,5 @@ public class Configuration {
     public final static String contextString = "../GEAS/config/constraint/context.xml";
     public final static String dataRoot = "../GEAS/config/data/changes/";
     public final static String outRoot = "../GEAS/config/data/out/";
-/*    
-    static {
-        logger = LogFactory.getLog(Configuration.class.getName());     
-        systemProperties = new Properties();
-    }
-    public void init(String filename) {
-        InputStream propertyInputStream = Configuration.class.getResourceAsStream(systemProString);
-        if (propertyInputStream == null) {
-            logger.error("System.property inputstream is null");
-        }    
-        
-        try {
-        	System.out.println(systemProString);
-            systemProperties.load(propertyInputStream);
-        } catch (IOException ex) {
-            logger.error(ex);
-        }
-        logger.info("SystemProperty initialization OK!");
-    }
-    
-    public static String getConfigStr(String key) {
-        String str = systemProperties.getProperty(key).trim();
-        return str;
-    }
-    
-    public static int getConfigInt(String key) {
-        int i = Integer.parseInt(systemProperties.getProperty(key).trim());
-        return i;
-    }
-    
-    public static double getConfigNumeric(String key) {
-        double d = Double.parseDouble(systemProperties.getProperty(key).trim());
-        return d;
-    }
-    
-    public static boolean getConfigBool(String key) {
-        boolean d = Boolean.parseBoolean(systemProperties.getProperty(key).trim());
-        return d;
-    }*/
+
 }

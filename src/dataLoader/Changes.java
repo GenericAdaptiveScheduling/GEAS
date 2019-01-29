@@ -26,10 +26,6 @@ public abstract class Changes {
     
     public abstract boolean hasNextChange();
     public abstract ContextChange nextChange();
-    //public abstract ContextPool initContextPool();
-    
-    //public abstract Instance convertChg2Inst();
-    //public abstract Instance convertChgs2Inst();
     
     public abstract void close();
     

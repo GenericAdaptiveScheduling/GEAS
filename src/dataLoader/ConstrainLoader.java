@@ -40,7 +40,7 @@ import formula.UnaryFormula;
 * 
 * @author why
 * 
- * load and parse the context configuration file
+ * load and parse the context configuration files 
 */ 
 
 public class ConstrainLoader {

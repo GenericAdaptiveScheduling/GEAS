@@ -254,7 +254,7 @@ public class ImpliesFormula extends Formula {
 
 	@Override
 	public Formula createTreeNew(HashMap<String, Context> contexts) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub 
 		ImpliesFormula result = new ImpliesFormula("implies");
         result.setSubFormula(first.createTreeNew(contexts),second.createTreeNew(contexts));
         return result;

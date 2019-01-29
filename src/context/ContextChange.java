@@ -30,7 +30,7 @@ public class ContextChange {
 	
     //private int state;//safe or not(unstable patterns) 0 safe/1 unsafe
     private HashMap<String,Integer> state = new HashMap<String,Integer>();
-    private LinkedList<Pattern> unsafePatterns = new LinkedList<Pattern>();//unsafe pattern list
+    private LinkedList<Pattern> unsafePatterns = new LinkedList<Pattern>();//s-condition pattern list
     
     private HashMap<String,Integer> consider = new HashMap<String,Integer>();
     @SuppressWarnings("unused")
